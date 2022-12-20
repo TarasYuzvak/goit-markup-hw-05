@@ -79,7 +79,7 @@ h1, h2, h3, p {
 }
 
 .nav-list {
-
+    transition: 250ms;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -132,7 +132,7 @@ h1, h2, h3, p {
     letter-spacing: 0.02em;
     color: var(--grey-color);
     text-decoration: none;
-    
+    transition: 250ms;
 }
 
 .contacts-header .link:hover, .contacts-header .link:focus {
@@ -355,7 +355,6 @@ img {
 .team-icon:hover, .team-icon:focus {
     background: #2196F3;
     fill: #FFFFFF;
-    border-radius: 50%;
     cursor: pointer;
 }
 
@@ -367,6 +366,8 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 50%;
+    transition: 250ms;
 }
 
 .container-team {
@@ -398,6 +399,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 250ms;
 }
 
 .client-icon:hover, .client-icon:focus {
@@ -416,6 +418,7 @@ img {
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
+    transition: 250ms;
 }
 
 .footer-address {
@@ -425,6 +428,7 @@ img {
     letter-spacing: 0.03em;
     color: var(--white-color);
     text-decoration: none;
+    transition: 250ms;
 }
 
 .contacts-footer:hover, .contacts-footer:focus {
@@ -481,6 +485,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 250ms;
 }
 
 .footer-icons:hover, .footer-icons:focus {
@@ -499,11 +504,13 @@ footer {
     display: inline-block;
 }
 
+
 /* Портфолио */
 
 .button-portfolio {
     display: flex;
     justify-content: center;
+    
 }
 
 .button-portfolio .item:not(:last-child) {
@@ -523,6 +530,8 @@ footer {
     cursor: pointer;
     border-color: transparent;
     padding: 6px 22px;
+    transition: 250ms;
+    display: inline-flex;
 }
 
 .button-portfolio .button:hover, .button-portfolio .button:focus {
@@ -558,13 +567,40 @@ footer {
 
 .projects-item {
     margin-bottom: 30px;
+}
+
+
+.project-link {
+    text-decoration: none;
+    display: block;
+}
+
+.father-overlay {
     position: relative;
 }
 
-.projects-item:hover {
+.project-overlay {
+    position: absolute;
+    background: rgba(33, 150, 243, 0.9);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+}
+
+.project-overlay-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    color: var(--white-color);
+}
+
+
+.project-link:hover, .project-link:focus {
     border: 1px solid #EEEEEE;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-    cursor: pointer;
 }
 
 .projects-item:nth-last-child(-n +3) {
@@ -591,30 +627,3 @@ footer {
   border-left: 1px solid #eeeeee;
 }
 
-/*
-
-.test-text {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-
-
-    letter-spacing: 0.03em;
-
-    color: #FFFFFF;
-    padding: 63px 24px;
-
-}
-
-.test {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 370px;
-    height: 294px;
-    background: rgba(33, 150, 243, 0.9);
-    position: absolute;
-    bottom: 110px;
-}
-
-*/
